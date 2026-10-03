@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Quantum Escape</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Three.js -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+        }
+    }
+    </script>
+
+</head>
+
+<body>
+
+    <!-- GAME UI -->
+
+    <div id="gameUI">
+
+        <div id="title">
+            QUANTUM ESCAPE
+        </div>
+
+        <div id="level">
+            LEVEL 1
+        </div>
+
+        <div id="lives">
+            ❤️ ❤️ ❤️
+        </div>
+
+        <div id="message">
+            Click to start
+        </div>
+
+    </div>
+
+
+    <!-- CROSSHAIR -->
+
+    <div id="crosshair">
+        +
+    </div>
+
+
+    <!-- INTERACTION -->
+
+    <div id="interaction">
+        Press E to interact
+    </div>
+
+
+    <!-- PUZZLE -->
+
+    <div id="puzzlePanel">
+
+        <div id="puzzleBox">
+
+            <h2 id="puzzleTitle">
+                Quantum Puzzle
+            </h2>
+
+            <p id="puzzleQuestion">
+                Question
+            </p>
+
+            <div id="answers">
+
+                <button id="answer1">
+                    Answer 1
+                </button>
+
+                <button id="answer2">
+                    Answer 2
+                </button>
+
+                <button id="answer3">
+                    Answer 3
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- LEARNING PANEL -->
+
+    <div id="learningPanel">
+
+        <div id="learningBox">
+
+            <h2 id="learningTitle">
+                Quantum Clue
+            </h2>
+
+            <p id="learningText">
+                Learning content
+            </p>
+
+            <button id="continueButton">
+                CONTINUE
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- GAME OVER -->
+
+    <div id="gameOver">
+
+        <h1>
+            GAME OVER
+        </h1>
+
+        <button onclick="location.reload()">
+            PLAY AGAIN
+        </button>
+
+    </div>
+
+
+    <!-- VICTORY -->
+
+    <div id="victory">
+
+        <h1>
+            YOU ESCAPED!
+        </h1>
+
+        <p>
+            You learned quantum computing.
+        </p>
+
+        <p>
+            ✓ Qubits
+            <br>
+            ✓ Quantum Gates
+            <br>
+            ✓ Reversibility
+        </p>
+
+        <button onclick="location.reload()">
+            PLAY AGAIN
+        </button>
+
+    </div>
+
+
+    <!-- GAME SCRIPT -->
+
+    <script type="module"
+        src="game.js">
+    </script>
+
+</body>
+
+</html>

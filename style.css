@@ -1,0 +1,445 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    overflow: hidden;
+
+    background: black;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/* THREE.JS CANVAS */
+
+canvas {
+    display: block;
+}
+
+
+/* GAME UI */
+
+#gameUI {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    color: white;
+
+    z-index: 10;
+}
+
+
+/* TITLE */
+
+#title {
+
+    position: absolute;
+
+    top: 20px;
+    left: 20px;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* LEVEL */
+
+#level {
+
+    position: absolute;
+
+    top: 60px;
+    left: 20px;
+
+    font-size: 18px;
+}
+
+
+/* LIVES */
+
+#lives {
+
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    font-size: 25px;
+}
+
+
+/* MESSAGE */
+
+#message {
+
+    position: absolute;
+
+    bottom: 40px;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+
+/* CROSSHAIR */
+
+#crosshair {
+
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    color: white;
+
+    font-size: 25px;
+
+    z-index: 20;
+
+    pointer-events: none;
+}
+
+
+/* INTERACTION */
+
+#interaction {
+
+    position: fixed;
+
+    bottom: 90px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    padding: 12px 20px;
+
+    background:
+        rgba(0, 0, 0, 0.75);
+
+    color: white;
+
+    border-radius: 8px;
+
+    display: none;
+
+    z-index: 30;
+}
+
+
+/* LEARNING PANEL */
+
+#learningPanel {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        rgba(0, 0, 0, 0.75);
+
+    z-index: 100;
+}
+
+
+/* LEARNING BOX */
+
+#learningBox {
+
+    width: 500px;
+
+    max-width: 90%;
+
+    padding: 35px;
+
+    background:
+        #151515;
+
+    color: white;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    border:
+        2px solid #555;
+}
+
+
+#learningBox h2 {
+
+    margin-bottom: 20px;
+
+    font-size: 28px;
+}
+
+
+#learningBox p {
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+/* PUZZLE PANEL */
+
+#puzzlePanel {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        rgba(0, 0, 0, 0.8);
+
+    z-index: 100;
+}
+
+
+/* PUZZLE BOX */
+
+#puzzleBox {
+
+    width: 550px;
+
+    max-width: 90%;
+
+    padding: 35px;
+
+    background:
+        #151515;
+
+    color: white;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    border:
+        2px solid #555;
+}
+
+
+#puzzleTitle {
+
+    margin-bottom: 20px;
+
+    font-size: 28px;
+}
+
+
+#puzzleQuestion {
+
+    font-size: 20px;
+
+    margin-bottom: 25px;
+}
+
+
+/* BUTTONS */
+
+button {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin: 10px 0;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+        #333;
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+}
+
+
+button:hover {
+
+    background:
+        #555;
+}
+
+
+/* CONTINUE BUTTON */
+
+#continueButton {
+
+    background:
+        #2563eb;
+}
+
+
+/* GAME OVER */
+
+#gameOver {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column;
+
+    background:
+        rgba(80, 0, 0, 0.95);
+
+    color: white;
+
+    z-index: 500;
+}
+
+
+#gameOver h1 {
+
+    font-size: 60px;
+
+    margin-bottom: 30px;
+}
+
+
+/* VICTORY */
+
+#victory {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column;
+
+    background:
+        rgba(0, 20, 40, 0.97);
+
+    color: white;
+
+    text-align: center;
+
+    z-index: 500;
+}
+
+
+#victory h1 {
+
+    font-size: 60px;
+
+    margin-bottom: 25px;
+}
+
+
+#victory p {
+
+    font-size: 22px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+/* RED ALERT */
+
+.redAlert {
+
+    animation:
+        redFlash 0.3s
+        infinite;
+}
+
+
+@keyframes redFlash {
+
+    0% {
+        background:
+            rgba(255, 0, 0, 0);
+    }
+
+    50% {
+        background:
+            rgba(255, 0, 0, 0.25);
+    }
+
+    100% {
+        background:
+            rgba(255, 0, 0, 0);
+    }
+}
